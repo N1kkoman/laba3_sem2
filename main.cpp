@@ -32,7 +32,7 @@ int main() {
     z1 *= z2;
     std::cout << z1 << "\n\n";
 
-    complex test(0);
+    complex test;
     std::cout << "Enter a complex number: (real and imaginary parts separated by a space)" << std::endl;
     std::cin >> test;
     std::cout << test << "\n\n";

@@ -17,6 +17,9 @@ public:
     //Конструктор от действительного числа
     complex(double a) : m_a(a), m_b(0) {};
 
+    //Базовый конструктор 
+    complex() : m_a(0), m_b(0) {};
+
     //Конструктор копирования
     complex(const complex& copy) : complex(copy.m_a, copy.m_b) {};
 
