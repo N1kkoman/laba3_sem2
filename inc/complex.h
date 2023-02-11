@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 
 class complex {
@@ -11,38 +11,38 @@ private:
     friend std::ostream& operator << (std::ostream& output, const complex& number);
     friend std::istream& operator >> (std::istream& in, complex& number);
 public:
-    //Конструктор от действительной и мнимой части
+    //РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РѕС‚ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕР№ Рё РјРЅРёРјРѕР№ С‡Р°СЃС‚Рё
     complex(double a, double b) : m_a(a), m_b(b) {};
 
-    //Конструктор от действительного числа
+    //РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РѕС‚ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ С‡РёСЃР»Р°
     complex(double a) : m_a(a), m_b(0) {};
 
-    //Базовый конструктор 
+    //Р‘Р°Р·РѕРІС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 
     complex() : m_a(0), m_b(0) {};
 
-    //Конструктор копирования
+    //РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
     complex(const complex& copy) : complex(copy.m_a, copy.m_b) {};
 
-    //Дефолтный деструктор
+    //Р”РµС„РѕР»С‚РЅС‹Р№ РґРµСЃС‚СЂСѓРєС‚РѕСЂ
     ~complex() = default;
 
-    //Оператор присваивания копированием
+    //РћРїРµСЂР°С‚РѕСЂ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ РєРѕРїРёСЂРѕРІР°РЅРёРµРј
     complex& operator = (const complex& copy);
 
-    //Оператор +=
+    //РћРїРµСЂР°С‚РѕСЂ +=
     complex& operator += (const complex& copy);
 
-    //Оператор *=
+    //РћРїРµСЂР°С‚РѕСЂ *=
     complex& operator *= (const complex& other);
 
-    //Префиксный инкремент
+    //РџСЂРµС„РёРєСЃРЅС‹Р№ РёРЅРєСЂРµРјРµРЅС‚
     complex& operator++ ()
     {
         ++m_a;
         return *this;
     };
 
-    //Постфиксный инкремент
+    //РџРѕСЃС‚С„РёРєСЃРЅС‹Р№ РёРЅРєСЂРµРјРµРЅС‚
     complex operator++ (int)
     {
         complex temp = *this;

@@ -1,7 +1,7 @@
-#include <complex.h>
+п»ї#include <complex.h>
 #include <iostream>
 
-//Конструктор копирования
+//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
 complex& complex::operator = (const complex& copy)
 {
     if (this != &copy) {
@@ -11,7 +11,7 @@ complex& complex::operator = (const complex& copy)
     return *this;
 }
 
-//Оператор +=
+//РћРїРµСЂР°С‚РѕСЂ +=
 complex& complex::operator += (const complex& copy)
 {
     m_a += copy.m_a;
@@ -19,14 +19,14 @@ complex& complex::operator += (const complex& copy)
     return *this;
 }
 
-//Оператор +
+//РћРїРµСЂР°С‚РѕСЂ +
 complex operator + (const complex& left, const complex& right)
 {
     complex temp(left.m_a + right.m_a, left.m_b + right.m_b);
     return temp;
 }
 
-//Оператор *=
+//РћРїРµСЂР°С‚РѕСЂ *=
 complex& complex::operator *= (const complex& other)
 {
     double temp_a = m_a * other.m_a - m_b * other.m_b;
@@ -35,7 +35,7 @@ complex& complex::operator *= (const complex& other)
     return *this;
 }
 
-//Оператор *
+//РћРїРµСЂР°С‚РѕСЂ *
 complex operator * (const complex& left, const complex& right)
 {
     double temp_a = left.m_a * right.m_a - left.m_b * right.m_b;
@@ -44,14 +44,14 @@ complex operator * (const complex& left, const complex& right)
     return temp;
 }
 
-//Оператор вывода
+//РћРїРµСЂР°С‚РѕСЂ РІС‹РІРѕРґР°
 std::ostream& operator << (std::ostream& out, const complex& number)
 {
     out << number.m_a << ' ' << '+' << ' ' << number.m_b << 'i';
     return out;
 }
 
-//Оператор ввода
+//РћРїРµСЂР°С‚РѕСЂ РІРІРѕРґР°
 std::istream& operator >> (std::istream& in, complex& number)
 {
     in >> number.m_a >> number.m_b;
